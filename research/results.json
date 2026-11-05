@@ -1,0 +1,217 @@
+{
+ "note": "UCI Heart Failure Clinical Records, real patients, n=299; follow-up 'time' excluded because it is only known after the outcome; tiers: <0.2, 0.2-0.5, >=0.5",
+ "n": 299,
+ "prevalence": 0.3210702341137124,
+ "models": {
+  "logistic": {
+   "auc": 0.7655223727422003,
+   "brier": 0.1765473116744218,
+   "tiers_repeat_averaged": [
+    {
+     "tier": "low",
+     "n": 114,
+     "events": 14,
+     "observed": 0.12280701754385964,
+     "ci_low": 0.0745805246720894,
+     "ci_high": 0.19562626138648417,
+     "mean_pred": 0.10396231359611635
+    },
+    {
+     "tier": "medium",
+     "n": 117,
+     "events": 38,
+     "observed": 0.3247863247863248,
+     "ci_low": 0.24667452934670642,
+     "ci_high": 0.41403833774542087,
+     "mean_pred": 0.3289604506691905
+    },
+    {
+     "tier": "high",
+     "n": 68,
+     "events": 44,
+     "observed": 0.6470588235294118,
+     "ci_low": 0.5284083420991774,
+     "ci_high": 0.7499818941984553,
+     "mean_pred": 0.667735057840021
+    }
+   ],
+   "tier_agreement_mean_over_repeats": 0.9127090301003343,
+   "share_patients_agreement_ge_0.8": 0.842809364548495
+  },
+  "logistic+sigmoid": {
+   "auc": 0.7651323891625615,
+   "brier": 0.17764048553315986,
+   "tiers_repeat_averaged": [
+    {
+     "tier": "low",
+     "n": 82,
+     "events": 7,
+     "observed": 0.08536585365853659,
+     "ci_low": 0.04196599135384306,
+     "ci_high": 0.16587729208914964,
+     "mean_pred": 0.1329598856290596
+    },
+    {
+     "tier": "medium",
+     "n": 166,
+     "events": 55,
+     "observed": 0.3313253012048193,
+     "ci_low": 0.26424828186073984,
+     "ci_high": 0.4060327329200912,
+     "mean_pred": 0.3275681151901117
+    },
+    {
+     "tier": "high",
+     "n": 51,
+     "events": 34,
+     "observed": 0.6666666666666666,
+     "ci_low": 0.5296812196648056,
+     "ci_high": 0.7803024423727717,
+     "mean_pred": 0.6214839738540076
+    }
+   ],
+   "tier_agreement_mean_over_repeats": 0.9183946488294316,
+   "share_patients_agreement_ge_0.8": 0.8528428093645485
+  },
+  "random_forest": {
+   "auc": 0.7919540229885058,
+   "brier": 0.16647090355373045,
+   "tiers_repeat_averaged": [
+    {
+     "tier": "low",
+     "n": 119,
+     "events": 11,
+     "observed": 0.09243697478991597,
+     "ci_low": 0.05240003349104728,
+     "ci_high": 0.15796518480633737,
+     "mean_pred": 0.125301992865854
+    },
+    {
+     "tier": "medium",
+     "n": 110,
+     "events": 42,
+     "observed": 0.38181818181818183,
+     "ci_low": 0.2964705183972551,
+     "ci_high": 0.4751419677238115,
+     "mean_pred": 0.33284712990761833
+    },
+    {
+     "tier": "high",
+     "n": 70,
+     "events": 43,
+     "observed": 0.6142857142857143,
+     "ci_low": 0.4971552064563055,
+     "ci_high": 0.7195248221454583,
+     "mean_pred": 0.6228223878088052
+    }
+   ],
+   "tier_agreement_mean_over_repeats": 0.8752508361204013,
+   "share_patients_agreement_ge_0.8": 0.745819397993311
+  },
+  "random_forest+sigmoid": {
+   "auc": 0.790327380952381,
+   "brier": 0.16773289925071294,
+   "tiers_repeat_averaged": [
+    {
+     "tier": "low",
+     "n": 123,
+     "events": 10,
+     "observed": 0.08130081300813008,
+     "ci_low": 0.04475838884502016,
+     "ci_high": 0.14320518146629724,
+     "mean_pred": 0.14866395591434972
+    },
+    {
+     "tier": "medium",
+     "n": 109,
+     "events": 43,
+     "observed": 0.3944954128440367,
+     "ci_low": 0.30783761244479607,
+     "ci_high": 0.48833684803786287,
+     "mean_pred": 0.3264447241988929
+    },
+    {
+     "tier": "high",
+     "n": 67,
+     "events": 43,
+     "observed": 0.6417910447761194,
+     "ci_low": 0.5221828769475225,
+     "ci_high": 0.7460211161864552,
+     "mean_pred": 0.625573353110088
+    }
+   ],
+   "tier_agreement_mean_over_repeats": 0.888963210702341,
+   "share_patients_agreement_ge_0.8": 0.802675585284281
+  },
+  "grad_boosting": {
+   "auc": 0.7460514162561578,
+   "brier": 0.1957925297955478,
+   "tiers_repeat_averaged": [
+    {
+     "tier": "low",
+     "n": 147,
+     "events": 20,
+     "observed": 0.1360544217687075,
+     "ci_low": 0.08983018360124098,
+     "ci_high": 0.20081642847394257,
+     "mean_pred": 0.07996833909670845
+    },
+    {
+     "tier": "medium",
+     "n": 77,
+     "events": 29,
+     "observed": 0.37662337662337664,
+     "ci_low": 0.27669846411806526,
+     "ci_high": 0.48827402529332703,
+     "mean_pred": 0.33525851128013306
+    },
+    {
+     "tier": "high",
+     "n": 75,
+     "events": 47,
+     "observed": 0.6266666666666667,
+     "ci_low": 0.5135475597239507,
+     "ci_high": 0.7274419686468587,
+     "mean_pred": 0.7435829912489247
+    }
+   ],
+   "tier_agreement_mean_over_repeats": 0.8327759197324415,
+   "share_patients_agreement_ge_0.8": 0.6789297658862876
+  },
+  "grad_boosting+sigmoid": {
+   "auc": 0.7726806239737274,
+   "brier": 0.17850369971871197,
+   "tiers_repeat_averaged": [
+    {
+     "tier": "low",
+     "n": 71,
+     "events": 7,
+     "observed": 0.09859154929577464,
+     "ci_low": 0.048582206325328975,
+     "ci_high": 0.18980927648636933,
+     "mean_pred": 0.17078666900047068
+    },
+    {
+     "tier": "medium",
+     "n": 187,
+     "events": 62,
+     "observed": 0.3315508021390374,
+     "ci_low": 0.2680629642261224,
+     "ci_high": 0.4018203316590514,
+     "mean_pred": 0.31560863248040594
+    },
+    {
+     "tier": "high",
+     "n": 41,
+     "events": 27,
+     "observed": 0.6585365853658537,
+     "ci_low": 0.5054955435372689,
+     "ci_high": 0.7844138263335655,
+     "mean_pred": 0.5831551104462304
+    }
+   ],
+   "tier_agreement_mean_over_repeats": 0.8518394648829432,
+   "share_patients_agreement_ge_0.8": 0.7424749163879598
+  }
+ }
+}
