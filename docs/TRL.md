@@ -19,6 +19,6 @@ Tier cells show: n / observed event rate (Wilson 95 % CI) / mean predicted risk.
 - All models separate tiers monotonically: observed event rate ~0.08–0.14 (low), ~0.32–0.39 (medium), ~0.61–0.67 (high).
 - AUC 0.75–0.79: modest discrimination; random forest is best, logistic regression is almost as good and the most stable (mean tier agreement 0.91).
 - Uncalibrated gradient boosting is over-confident at the extremes (high-tier mean prediction 0.74 vs observed 0.63); sigmoid calibration fixes much of that and moves many patients into the medium tier.
-- Tier membership is not reproducible for every patient: for the best models roughly one patient in ten lies near a boundary and changes tier between repeats.
+- Tier membership is not reproducible for every patient: 15–16 % of patients (logistic) and 20–25 % (random forest) fall in the modal tier in fewer than 80 % of the 10 repeated fits; gradient boosting is worst (26–32 %).
 - Tier tables use repeat-averaged predictions, which are smoother than a single model's; a single-fit tier would be less stable.
 - n = 299 single-source patients, 96 events; intervals are wide and there is no external validation.
